@@ -4,13 +4,13 @@ from send_mail import send_mail
 
 app = Flask(__name__)
 
-ENV = 'dev'
+ENV = 'prod'
 if ENV == 'dev':
     app.debug = True
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Prodevelop22!@localhost/toyota'
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = ''
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://wplnbfenpyqtzb:984bc0d39a877820d82a2eeaab70be8d1a87393b016a8cf7c352e3d65927c7a3@ec2-52-72-221-20.compute-1.amazonaws.com:5432/d41fqcog9htck7'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'False'
 
